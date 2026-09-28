@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ishwari — Data Science and Machine Learning portfolio">
+<title>Ishwari | Data Science & ML Portfolio</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a30;--text:#eef2ff;--muted:#a7b2cf;--accent:#a78bfa;--mint:#5eead4;--line:rgba(255,255,255,.11)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 0%,#25204b 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}.brand{font-weight:800;font-size:1.25rem;letter-spacing:-.04em}.brand span{color:var(--mint)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--mint)}
+.hero{padding:92px 0 78px;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:48px}
+.eyebrow{color:var(--mint);font-size:.83rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.04;letter-spacing:-.065em;margin:18px 0 22px}
+.gradient{background:linear-gradient(100deg,var(--mint),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.12rem;max-width:650px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.2s}
+.btn.primary{background:var(--mint);color:#07121b;border-color:transparent}.btn:hover{transform:translateY(-2px)}
+.profile{background:linear-gradient(145deg,rgba(167,139,250,.18),rgba(94,234,212,.07));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 24px 80px #0003}
+.orbit{height:230px;border-radius:22px;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#a78bfa2a,transparent 65%);position:relative;overflow:hidden}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #a78bfa66;border-radius:50%;width:190px;height:190px;transform:rotate(35deg) scaleX(1.5)}
+.orbit:after{transform:rotate(-35deg) scaleX(1.5);border-color:#5eead477}
+.monogram{font-size:5rem;font-weight:900;letter-spacing:-.1em;background:linear-gradient(135deg,var(--mint),var(--accent));-webkit-background-clip:text;color:transparent;z-index:1}
+.profile small{color:var(--muted)}.profile h3{margin:14px 0 4px}
+section{padding:68px 0}.section-head{margin-bottom:28px}.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.05em;margin:4px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(18,26,48,.84);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card .icon{font-size:1.7rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);margin:0}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.tag{padding:7px 12px;border-radius:999px;border:1px solid #a78bfa55;background:#a78bfa12;color:#ded5ff;font-size:.9rem}
+.project{display:flex;flex-direction:column;min-height:240px}.project .type{color:var(--mint);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.project p{flex:1}.project a{color:var(--mint);font-weight:700;margin-top:18px}
+.timeline{border-left:1px solid #a78bfa66;padding-left:24px;margin-left:8px}.timeline-item{position:relative;padding:0 0 25px}.timeline-item:before{content:"";position:absolute;width:10px;height:10px;background:var(--mint);border-radius:50%;left:-30px;top:8px}.timeline-item h3{margin:0}.timeline-item p{margin:5px 0;color:var(--muted)}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,#a78bfa20,#5eead415);border:1px solid var(--line);padding:34px;border-radius:24px}.contact h2{margin:0;font-size:2rem}.contact p{color:var(--muted);margin:8px 0 0}
+footer{padding:30px 0;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:64px 0}.grid{grid-template-columns:1fr}.navlinks{gap:12px;font-size:.8rem}.contact{align-items:flex-start;flex-direction:column}.profile{max-width:480px}.hide-mobile{display:none}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a class="brand" href="#home">ishwari<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav></header>
+<main>
+<section class="hero wrap" id="home">
+<div><div class="eyebrow">Data Science • Machine Learning • AI</div>
+<h1>Hi, I'm <span class="gradient">Ishwari.</span><br>Turning data into <span class="gradient">insights.</span></h1>
+<p class="lead">I’m a Computer Science graduate and MCS student focused on Data Science, Machine Learning, and building practical, data-driven solutions.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn" href="#contact">Let’s connect</a></div></div>
+<div class="profile"><div class="orbit"><div class="monogram">I.</div></div><h3>Data Science Learner</h3><small>Curious mind · Analytical thinking · Continuous learning</small></div>
+</section>
+<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">A little about me</div><h2>Curiosity meets code.</h2><p>My journey from computer science to data and intelligent systems.</p></div><div class="card"><p>I have completed my B.Sc. in Computer Science and am currently pursuing MCS with an interest in AI and Data Science. I enjoy learning how to clean, explore, visualize, and model data, then communicate what it tells us in a clear and useful way.</p></div></div></section>
+<section id="skills"><div class="wrap"><div class="section-head"><div class="eyebrow">What I work with</div><h2>Skills & tools</h2><p>Technologies I’m learning and using in my data journey.</p></div><div class="grid">
+<div class="card"><div class="icon">⌘</div><h3>Programming</h3><p>Writing clear code and working with data.</p><div class="skills"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Java</span></div></div>
+<div class="card"><div class="icon">▥</div><h3>Data Analysis</h3><p>Preparing data and discovering patterns.</p><div class="skills"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Statistics</span><span class="tag">Matplotlib</span></div></div>
+<div class="card"><div class="icon">✳</div><h3>AI & Machine Learning</h3><p>Exploring predictive models and AI concepts.</p><div class="skills"><span class="tag">ML Fundamentals</span><span class="tag">Data Visualization</span><span class="tag">Generative AI</span></div></div>
+</div></div></section>
+<section id="projects"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects</h2><p>A few projects from my learning and development journey.</p></div><div class="grid">
+<div class="card project"><div class="type">Web Development</div><h3>Fashion Store E-Commerce Website</h3><p>An online fashion store experience with product browsing and a shopping-cart flow.</p><a href="https://github.com/swapnilminde0021-maker/Fashion-Store-E-Commerce-Website" target="_blank" rel="noopener">View project ↗</a></div>
+<div class="card project"><div class="type">Python • Beginner Project</div><h3>Student Result Calculator</h3><p>A simple program to calculate student totals, percentages, and results.</p><a href="https://github.com/" target="_blank" rel="noopener">Add GitHub link ↗</a></div>
+<div class="card project"><div class="type">Data Science • In progress</div><h3>Exploratory Data Analysis</h3><p>A space for a future project exploring a dataset, visualizing trends, and sharing insights.</p><a href="#contact">Project coming soon ↗</a></div>
+</div></div></section>
+<section id="journey"><div class="wrap"><div class="section-head"><div class="eyebrow">My journey</div><h2>Education & experience</h2></div><div class="timeline">
+<div class="timeline-item"><h3>MCS — AI & Data Science focus</h3><p>Currently pursuing · Building skills in analytics, machine learning, and intelligent systems.</p></div>
+<div class="timeline-item"><h3>B.Sc. Computer Science</h3><p>Completed · 2026</p></div>
+<div class="timeline-item"><h3>AI Prompt Engineer Internship</h3><p>Worked on prompt design, testing AI responses, and improving prompt quality.</p></div>
+</div></div></section>
+<section id="contact"><div class="wrap"><div class="contact"><div><div class="eyebrow">Have an opportunity?</div><h2>Let’s build something meaningful.</h2><p>I’m open to learning, collaboration, and entry-level opportunities in data and AI.</p></div><a class="btn primary" href="mailto:your.email@example.com">Email me ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Ishwari · Data Science Portfolio</span><span>Designed with curiosity & ☕</span></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
